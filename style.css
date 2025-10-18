@@ -1,0 +1,238 @@
+/*======================================================
+  تنسيقات أساسية: Dark Mode مريح للعين
+======================================================*/
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #0d0d0d; /* خلفية أغمق جداً */
+    color: #e0e0e0; /* لون نص مريح وفاتح */
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    direction: rtl; /* اتجاه عام للعربية */
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*======================================================
+  شريط التنقل (Header)
+======================================================*/
+header {
+    background-color: #141414;
+    padding: 15px 40px;
+    border-bottom: 2px solid #e50914;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* تنسيق GRID لترتيب العناصر (شعار، روابط، بحث) */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header nav {
+    justify-self: center; /* وضع الروابط في المنتصف */
+}
+
+nav a {
+    color: #e0e0e0;
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition:
+        color 0.3s,
+        border-bottom 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+    border-bottom: 2px solid #e50914;
+}
+
+/* تنسيقات شريط البحث */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-self: end; /* محاذاة البحث لليمين */
+}
+
+.search-bar input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #444;
+    border-radius: 20px 0 0 20px;
+    background-color: #222;
+    color: #e0e0e0;
+    font-size: 1em;
+    outline: none;
+    width: 200px;
+    transition: width 0.3s;
+    text-align: right; /* محاذاة النص لليمين داخل حقل البحث */
+}
+
+.search-bar input[type="text"]:focus {
+    width: 250px;
+    border-color: #e50914;
+}
+
+.search-bar button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #ff2020;
+}
+
+/*======================================================
+  قسم المواسم والحلقات (مع تصحيحات المشكلة)
+======================================================*/
+.episode-selector {
+    padding: 25px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #282828;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.episode-selector label {
+    font-size: 1.1em;
+    color: #e6e6e6;
+    margin-left: 15px;
+}
+
+.episode-selector select {
+    padding: 12px;
+    margin-left: 30px;
+    background-color: #0d0d0d;
+    color: white; /* تأكيد أن لون النص أبيض */
+    border: 1px solid #e50914;
+    font-weight: 500;
+    font-size: 1em;
+    direction: rtl; /* المحاذاة لليمين للنص العربي */
+    cursor: pointer;
+    /* إزالة مظهر المتصفح الافتراضي لضمان تطبيق الألوان */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.episode-selector option {
+    background-color: #1e1e1e; /* خلفية داكنة للخيار */
+    color: white; /* نص أبيض واضح */
+    padding: 10px;
+}
+
+.episode-selector button {
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 15px;
+}
+
+.episode-selector button:hover {
+    background-color: #ff2020;
+}
+
+/*======================================================
+  تنسيقات المحتوى الأخرى (متروكة كما هي)
+======================================================*/
+.container {
+    padding: 40px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #e50914;
+    font-size: 2em;
+    border-bottom: 2px solid #222;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.hero {
+    /* تم حذف التنسيق هنا لأنه في ملف style.css بالكامل */
+}
+
+.episode-player-container {
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.episode-player-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.movie-card {
+    /* تم حذف التنسيق هنا لأنه في ملف style.css بالكامل */
+}
+
+/*======================================================
+  التجاوب (Media Queries)
+======================================================*/
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 15px 20px;
+    }
+    header nav {
+        order: 3; /* نقل الروابط للأسفل في عرض الموبايل */
+        margin-top: 10px;
+    }
+    .search-bar {
+        margin: 10px 0;
+        width: 100%;
+        justify-self: center;
+    }
+    .search-bar input[type="text"] {
+        width: 100%;
+        border-radius: 20px;
+        text-align: right;
+    }
+    .search-bar input[type="text"]:focus {
+        width: 100%;
+    }
+    .search-bar button {
+        display: none; /* إخفاء زر البحث لتبسيط الواجهة في الموبايل */
+    }
+    .detail-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .episode-selector select,
+    .episode-selector button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
