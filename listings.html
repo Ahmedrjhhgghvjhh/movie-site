@@ -12,7 +12,7 @@
             <nav>
                 <a href="index.html">الرئيسية</a>
                 <a href="listings.html">قائمة الأفلام والمسلسلات</a>
-                <a href="#contact">اتصل بنا</a>
+                <a href="contact.html">اتصل بنا</a>
             </nav>
 
             <div class="search-bar">
@@ -55,24 +55,17 @@
 
         <script>
             function searchContent() {
-                // 1. الحصول على نص البحث وتحويله لأحرف صغيرة
                 let input = document.getElementById("searchInput");
                 let filter = input.value.toUpperCase();
-
-                // 2. الحصول على جميع الروابط (البطاقات)
                 let grid = document.getElementById("contentGrid");
                 let links = grid.getElementsByClassName("movie-link");
-
-                // 3. المرور على كل بطاقة والتحقق من التوافق
                 for (let i = 0; i < links.length; i++) {
                     let card = links[i].querySelector(".movie-card");
-                    let title = card.querySelector("h4").textContent; // نص العنوان داخل البطاقة
-
-                    // إذا كان العنوان يحتوي على نص البحث (مع تجاهل حالة الأحرف)
+                    let title = card.querySelector("h4").textContent;
                     if (title.toUpperCase().indexOf(filter) > -1) {
-                        links[i].style.display = ""; // إظهار البطاقة
+                        links[i].style.display = "";
                     } else {
-                        links[i].style.display = "none"; // إخفاء البطاقة
+                        links[i].style.display = "none";
                     }
                 }
             }
