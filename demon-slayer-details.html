@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>تفاصيل فيلم: قاتل الشياطين</title>
+        <meta
+            name="google-site-verification"
+            content="stAhrbJcjL-uZv9Qkwx2Dt4c4z8O_TBGawsXGzNpwgI"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            /* (تنسيقات داخلية للحفاظ على التصميم) */
+            .detail-header {
+                background-color: #141414;
+                padding: 60px 40px;
+                display: flex;
+                gap: 50px;
+                align-items: flex-start;
+                border-radius: 15px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+            }
+            .poster {
+                width: 320px;
+                height: 480px;
+                border-radius: 12px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+            }
+            .info h1 {
+                font-size: 3em;
+                color: #e50914;
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+            }
+            .rating {
+                font-size: 1.8em;
+                color: gold;
+                margin-bottom: 25px;
+                padding: 5px 10px;
+                background-color: #222;
+                border-radius: 5px;
+                display: inline-block;
+            }
+            /* إخفاء محدد الحلقات */
+            .episode-selector {
+                display: none;
+            }
+            .episode-player-container {
+                width: 100%;
+                margin-top: 30px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+                overflow: hidden;
+                border-radius: 12px;
+            }
+
+            /* تنسيق الفيديو المتجاوب */
+            .video-responsive-wrapper {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                padding-top: 20px;
+            }
+            .video-responsive-wrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+            }
+
+            .search-bar input[type="text"] {
+                text-align: right;
+            }
+            @media (max-width: 768px) {
+                .detail-header {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                .poster {
+                    width: 80%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" class="logo">MovieSite</a>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="series.html">المسلسلات</a>
+                <a href="movies.html">الأفلام</a>
+                <a href="contact.html">اتصل بنا</a>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="ابحث عن مسلسل أو فيلم..." />
+                <button>بحث</button>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="detail-header">
+                <img
+                    src="images/demonslayer.jpg"
+                    alt="بوستر فيلم قاتل الشياطين"
+                    class="poster"
+                />
+
+                <div class="info">
+                    <h1>قاتل الشياطين (Demon Slayer)</h1>
+
+                    <div class="rating">⭐ 9.5 / 10</div>
+
+                    <p>
+                        **الوصف:** يجد تانجيرو نفسه أمام مهمة جديدة ومروعة على
+                        متن قطار "موجين"، حيث يواجه أقوى الشياطين على الإطلاق.
+                        ينضم إليه زملاؤه وهاشيرا اللهب في معركة يائسة لحماية
+                        الركاب الأبرياء وكشف أسرار قوة الشياطين العليا. فيلم
+                        ملحمي ومؤثر يعتمد على الأرك القصصية الأكثر شعبية في
+                        السلسلة.
+                    </p>
+
+                    <p>
+                        <strong>النوع:</strong> أنمي، أكشن، مغامرات |
+                        <strong>سنة الإصدار:</strong> 2020 |
+                        <strong>مدة العرض:</strong> 110 دقيقة
+                    </p>
+
+                    <h2 class="section-title" style="margin-top: 20px">
+                        مشاهدة الفيلم الآن
+                    </h2>
+
+                    <div class="episode-player-container">
+                        <div class="video-responsive-wrapper">
+                            <iframe
+                                id="video-player"
+                                src="https://cdxaws.net/embed-4u1nzrpgqdqz.html"
+                                frameborder="0"
+                                scrolling="0"
+                                allowfullscreen
+                                style="
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                "
+                            >
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">شاهد التريلر</h2>
+            <div style="text-align: center; margin: 30px 0">
+                <iframe
+                    width="100%"
+                    height="450"
+                    src="https://www.youtube.com/embed/VKF1l2B7cVM"
+                    title="Demon Slayer Trailer"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+
+        <footer>
+            <p>جميع الحقوق محفوظة &copy; 2025</p>
+        </footer>
+
+        <script src="https://iamcdn.net/players/replace-domain.js"></script>
+    </body>
+</html>
