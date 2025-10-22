@@ -3,99 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مسلسل الحسد - الموسم 1 - مترجم</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>تفاصيل مسلسل: الحسد</title>
+    <meta name="google-site-verification" content="stAhrbJcjL-uZv9Qkwx2Dt4c4z8O_TBGawsXGzNpwgI" />
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { background-color: #1c1c1c; color: #f0f0f0; padding-top: 56px; }
-        .navbar { background-color: #28a745 !important; }
-        .series-header { background: url('alhasad_poster.jpg') no-repeat center center/cover; height: 300px; position: relative; }
-        .overlay { background-color: rgba(0, 0, 0, 0.6); position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; }
-        .series-title { color: white; font-size: 2.5rem; font-weight: bold; text-shadow: 2px 2px 4px #000000; }
-        .details-card { background-color: #2a2a2a; border-radius: 8px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); margin-top: -100px; position: relative; z-index: 1; }
-        .episode-list { max-height: 400px; overflow-y: auto; }
-        .episode-item { background-color: #333; margin-bottom: 10px; border-radius: 5px; transition: background-color 0.3s; }
-        .episode-item:hover { background-color: #444; }
-        .episode-link { color: #f0f0f0; text-decoration: none; display: block; padding: 10px; }
-        .episode-link .badge { background-color: #28a745; color: white; }
+        /* (تنسيقات داخلية للحفاظ على التصميم) */
+        .detail-header { background-color: #141414; padding: 60px 40px; display: flex; gap: 50px; align-items: flex-start; border-radius: 15px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); }
+        .poster { width: 320px; height: 480px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); }
+        .info h1 { font-size: 3em; color: #e50914; text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); }
+        .rating { font-size: 1.8em; color: gold; margin-bottom: 25px; padding: 5px 10px; background-color: #222; border-radius: 5px; display: inline-block; }
+        .episode-selector { padding: 25px; background-color: #1e1e1e; border-radius: 10px; margin-bottom: 20px; border: 1px solid #282828; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
+        .episode-selector select { padding: 12px; margin-left: 30px; background-color: #0d0d0d; color: white; border: 1px solid #e50914; font-weight: 500; }
+        .episode-player-container { width: 100%; height: 500px; margin-top: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); overflow: hidden; border-radius: 12px; }
+        .episode-player-container iframe { width: 100%; height: 100%; border-radius: 8px; }
+        .search-bar input[type="text"] { text-align: right; }
+        @media (max-width: 768px) {
+            .detail-header { flex-direction: column; align-items: center; text-align: center; }
+            .poster { width: 80%; height: auto; }
+        }
     </style>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">MyCima</a>
+    <header>
+        <a href="index.html" class="logo">MovieSite</a>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="series.html">المسلسلات</a>
+            <a href="movies.html">الأفلام</a>
+            <a href="contact.html">اتصل بنا</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="ابحث عن مسلسل أو فيلم...">
+            <button>بحث</button>
         </div>
-    </nav>
+    </header>
 
-    <div class="series-header">
-        <div class="overlay">
-            <div class="container">
-                <h1 class="series-title">مسلسل الحسد (Kıskanmak)</h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="details-card">
-                    <h2 class="text-white mb-3">الوصف والتفاصيل</h2>
-                    <p class="text-light">
-                        مشاهدة وتحميل مسلسل الحسد مترجم اون لاين "Kıskanmak" موسم 1، من بطولة: أوزغو نامال، بيريل بوزام، حفصة نور سانجاكتوتان، ديلارا أكسوييك. تدور أحداث القصة حول: محرومة من حب أمها ومقارنةً بنجاح أخيها خالد، تنهار سنيحة في دوامة الغيرة لتصبح مجرد ظل في بيت عائلتها، تُعرف بـ "الآنسة لا أحد".
-                    </p>
-                    <hr class="text-white-50">
-                    
-                    <h3 class="text-white mb-3">الموسم 1</h3>
-                    <div class="episode-list">
-                        </div>
+    <div class="container">
+        <div class="detail-header">
+            <img src="images/alhasad.jpg" alt="بوستر مسلسل الحسد" class="poster">
+            
+            <div class="info">
+                <h1>مسلسل الحسد (Kıskanmak)</h1>
+                
+                <div class="rating">
+                    ⭐ 7.5 / 10
                 </div>
+
+                <p>
+                    **الوصف:** مشاهدة وتحميل مسلسل الحسد مترجم اون لاين "Kıskanmak" موسم 1. تدور الأحداث حول: محرومة من حب أمها ومقارنةً بنجاح أخيها خالد، تنهار سنيحة في دوامة الغيرة لتصبح مجرد ظل في بيت عائلتها.
+                </p>
+
+                <p>
+                    <strong>النوع:</strong> دراما، تركي، مترجم | <strong>سنة الإصدار:</strong> 2025 | <strong>عدد المواسم:</strong> 1
+                </p>
+
+                <h2 class="section-title" style="margin-top: 20px;">اختيار الحلقة للمشاهدة</h2>
+                
+                <div class="episode-selector">
+                    <label for="season-select">الموسم:</label>
+                    <select id="season-select">
+                        <option value="S1">الموسم 1</option>
+                    </select>
+
+                    <label for="episode-select">الحلقة:</label>
+                    <select id="episode-select">
+                        <option value="E8">الحلقة 8 الثامنة مترجمة</option>
+                        <option value="E7">الحلقة 7 السابعة مترجمة</option>
+                        <option value="E6">الحلقة 6 السادسة مترجمة</option>
+                        <option value="E5">الحلقة 5 الخامسة مترجمة</option>
+                        <option value="E4">الحلقة 4 الرابعة مترجمة</option>
+                        <option value="E3">الحلقة 3 الثالثة مترجمة</option>
+                        <option value="E2">الحلقة 2 الثانية مترجمة</option>
+                        <option value="E1">الحلقة 1 الاولى مترجمة</option>
+                    </select>
+
+                    <button onclick="playEpisode()">تشغيل</button>
+                </div>
+
+                <div class="episode-player-container">
+                    <iframe id="video-player"
+                            src="https://w.cimalight.co/embed-player.php?vid=68a019a0a" 
+                            frameborder="0" 
+                            scrolling="0" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+
             </div>
         </div>
+        
+        <h2 class="section-title">شاهد التريلر</h2>
+        <div style="text-align: center; margin: 30px 0;">
+             <iframe width="100%" height="450" src="https://www.youtube.com/embed/placeholder" title="No Trailer Available" frameborder="0" allowfullscreen></iframe>
+        </div>
+
     </div>
 
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025</p>
+    </footer>
+    
+    <script src="https://iamcdn.net/players/replace-domain.js"></script> 
     <script>
-        // خريطة لربط رقم الحلقة بـ Video ID (VID) الذي استخدمته في الكود الأصلي
+        // خريطة لربط الموسم والحلقة بـ (رابط المشغل / Video ID)
         const EPISODE_LINKS = {
-            "8": "68a019a0a",
-            "7": "574fef84a",
-            "6": "8a765a035",
-            "5": "534d0b336",
-            "4": "1fb9e3a7e",
-            "3": "93d225b1b",
-            "2": "d0ae801e2",
-            "1": "db76b0b48"
+            // روابط الموسم الأول (تم استخلاصها من الكود الأصلي الذي أرسلته)
+            'S1-E8': 'https://w.cimalight.co/embed-player.php?vid=68a019a0a',
+            'S1-E7': 'https://w.cimalight.co/embed-player.php?vid=574fef84a',
+            'S1-E6': 'https://w.cimalight.co/embed-player.php?vid=8a765a035',
+            'S1-E5': 'https://w.cimalight.co/embed-player.php?vid=534d0b336',
+            'S1-E4': 'https://w.cimalight.co/embed-player.php?vid=1fb9e3a7e',
+            'S1-E3': 'https://w.cimalight.co/embed-player.php?vid=93d225b1b',
+            'S1-E2': 'https://w.cimalight.co/embed-player.php?vid=d0ae801e2',
+            'S1-E1': 'https://w.cimalight.co/embed-player.php?vid=db76b0b48',
         };
 
-        const episodeListContainer = document.querySelector('.episode-list');
+        function playEpisode() {
+            const season = document.getElementById('season-select').value;
+            const episode = document.getElementById('episode-select').value;
+            const key = `${season}-${episode}`;
 
-        // توليد رابط المشغل بناءً على الـ VID
-        const generateLink = (episodeNumber) => {
-            const vid = EPISODE_LINKS[episodeNumber.toString()];
-            return `player.html?vid=${vid}&title=مسلسل الحسد الحلقة ${episodeNumber}`;
-        };
+            const newSrc = EPISODE_LINKS[key];
+            const player = document.getElementById('video-player'); 
 
-        // توليد قائمة الحلقات
-        for (let i = 8; i >= 1; i--) {
-            const link = generateLink(i);
-            const episodeItem = document.createElement('div');
-            episodeItem.className = 'episode-item';
-            
-            const episodeLink = document.createElement('a');
-            episodeLink.href = link;
-            episodeLink.className = 'episode-link';
-            
-            episodeLink.innerHTML = `
-                <span class="badge rounded-pill me-2">حلقة ${i}</span>
-                الحلقة ${i} الثامنة مترجمة
-                <i class="fa fa-play float-start mt-1"></i>
-            `;
-            
-            episodeItem.appendChild(episodeLink);
-            episodeListContainer.appendChild(episodeItem);
+            if (newSrc) {
+                player.src = newSrc;
+            } else {
+                alert(`عذراً، لم يتم العثور على رابط لـ ${season} ${episode}. الرجاء اختيار حلقة أخرى.`);
+            }
         }
     </script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
