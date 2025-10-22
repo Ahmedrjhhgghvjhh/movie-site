@@ -67,14 +67,14 @@
 
                     <label for="episode-select">الحلقة:</label>
                     <select id="episode-select">
-                        <option value="E8">الحلقة 8 الثامنة مترجمة</option>
-                        <option value="E7">الحلقة 7 السابعة مترجمة</option>
-                        <option value="E6">الحلقة 6 السادسة مترجمة</option>
-                        <option value="E5">الحلقة 5 الخامسة مترجمة</option>
-                        <option value="E4">الحلقة 4 الرابعة مترجمة</option>
-                        <option value="E3">الحلقة 3 الثالثة مترجمة</option>
+                        <option value="E1" selected>الحلقة 1 الاولى مترجمة</option>
                         <option value="E2">الحلقة 2 الثانية مترجمة</option>
-                        <option value="E1">الحلقة 1 الاولى مترجمة</option>
+                        <option value="E3">الحلقة 3 الثالثة مترجمة</option>
+                        <option value="E4">الحلقة 4 الرابعة مترجمة</option>
+                        <option value="E5">الحلقة 5 الخامسة مترجمة</option>
+                        <option value="E6">الحلقة 6 السادسة مترجمة</option>
+                        <option value="E7">الحلقة 7 السابعة مترجمة</option>
+                        <option value="E8">الحلقة 8 الثامنة مترجمة</option>
                     </select>
 
                     <button onclick="playEpisode()">تشغيل</button>
@@ -82,7 +82,7 @@
 
                 <div class="episode-player-container">
                     <iframe id="video-player"
-                            src="https://w.cimalight.co/embed-player.php?vid=68a019a0a" 
+                            src="https://vidspeeds.com:2096/embed-7qnpe47iw5hz.html" 
                             frameborder="0" 
                             scrolling="0" 
                             allowfullscreen>
@@ -107,17 +107,14 @@
     <script>
         // خريطة لربط الموسم والحلقة بالرابط الفعلي (VIDs)
         const EPISODE_LINKS = {
-            // **تم تحديث جميع الروابط بالروابط الجديدة**
             'S1-E1': 'https://vidspeeds.com:2096/embed-7qnpe47iw5hz.html', // الحلقة 1
             'S1-E2': 'https://vidspeeds.com:2096/embed-svtec9nladzk.html', // الحلقة 2
             'S1-E3': 'https://vidspeeds.com:2096/embed-beprj0qumkhr.html', // الحلقة 3
             'S1-E4': 'https://vidspeeds.com:2096/embed-1fis6euo4yb9.html', // الحلقة 4
             'S1-E5': 'https://vidspeeds.com:2096/embed-i1mmi3otw47z.html', // الحلقة 5
             'S1-E6': 'https://vidspeeds.com:2096/embed-1zl8g43xgl4o.html', // الحلقة 6
-            
-            // روابط الحلقات من 7-8 (الروابط القديمة من الموقع الأصلي)
-            'S1-E7': 'https://w.cimalight.co/embed-player.php?vid=574fef84a',
-            'S1-E8': 'https://w.cimalight.co/embed-player.php?vid=68a019a0a',
+            'S1-E7': 'https://w.cimalight.co/embed-player.php?vid=574fef84a', // الحلقة 7
+            'S1-E8': 'https://w.cimalight.co/embed-player.php?vid=68a019a0a', // الحلقة 8
         };
 
         function playEpisode() {
