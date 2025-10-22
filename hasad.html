@@ -127,6 +127,40 @@
             const player = document.getElementById('video-player'); 
 
             if (newSrc) {
+                // هذا هو الجزء الذي يغير رابط الفيديو
+                player.src = newSrc;
+            } else {
+                alert(`عذراً، لم يتم العثور على رابط لـ ${season} ${episode}. الرجاء اختيار حلقة أخرى.`);
+            }
+        }
+    </script>
+</body>
+</html>
+    
+    <script src="https://iamcdn.net/players/replace-domain.js"></script> 
+    <script>
+        // خريطة لربط الموسم والحلقة بـ (رابط المشغل / Video ID)
+        const EPISODE_LINKS = {
+            // روابط الموسم الأول (تم استخلاصها من الكود الأصلي الذي أرسلته)
+            'S1-E8': 'https://w.cimalight.co/embed-player.php?vid=68a019a0a',
+            'S1-E7': 'https://w.cimalight.co/embed-player.php?vid=574fef84a',
+            'S1-E6': 'https://w.cimalight.co/embed-player.php?vid=8a765a035',
+            'S1-E5': 'https://w.cimalight.co/embed-player.php?vid=534d0b336',
+            'S1-E4': 'https://w.cimalight.co/embed-player.php?vid=1fb9e3a7e',
+            'S1-E3': 'https://w.cimalight.co/embed-player.php?vid=93d225b1b',
+            'S1-E2': 'https://w.cimalight.co/embed-player.php?vid=d0ae801e2',
+            'S1-E1': 'https://w.cimalight.co/embed-player.php?vid=db76b0b48',
+        };
+
+        function playEpisode() {
+            const season = document.getElementById('season-select').value;
+            const episode = document.getElementById('episode-select').value;
+            const key = `${season}-${episode}`;
+
+            const newSrc = EPISODE_LINKS[key];
+            const player = document.getElementById('video-player'); 
+
+            if (newSrc) {
                 player.src = newSrc;
             } else {
                 alert(`عذراً، لم يتم العثور على رابط لـ ${season} ${episode}. الرجاء اختيار حلقة أخرى.`);
