@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسلسل الحسد - الموسم 1 - مترجم</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { background-color: #1c1c1c; color: #f0f0f0; padding-top: 56px; }
+        .navbar { background-color: #28a745 !important; }
+        .series-header { background: url('alhasad_poster.jpg') no-repeat center center/cover; height: 300px; position: relative; }
+        .overlay { background-color: rgba(0, 0, 0, 0.6); position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; }
+        .series-title { color: white; font-size: 2.5rem; font-weight: bold; text-shadow: 2px 2px 4px #000000; }
+        .details-card { background-color: #2a2a2a; border-radius: 8px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); margin-top: -100px; position: relative; z-index: 1; }
+        .episode-list { max-height: 400px; overflow-y: auto; }
+        .episode-item { background-color: #333; margin-bottom: 10px; border-radius: 5px; transition: background-color 0.3s; }
+        .episode-item:hover { background-color: #444; }
+        .episode-link { color: #f0f0f0; text-decoration: none; display: block; padding: 10px; }
+        .episode-link .badge { background-color: #28a745; color: white; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MyCima</a>
+        </div>
+    </nav>
+
+    <div class="series-header">
+        <div class="overlay">
+            <div class="container">
+                <h1 class="series-title">مسلسل الحسد (Kıskanmak)</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="details-card">
+                    <h2 class="text-white mb-3">الوصف والتفاصيل</h2>
+                    <p class="text-light">
+                        مشاهدة وتحميل مسلسل الحسد مترجم اون لاين "Kıskanmak" موسم 1، من بطولة: أوزغو نامال، بيريل بوزام، حفصة نور سانجاكتوتان، ديلارا أكسوييك. تدور أحداث القصة حول: محرومة من حب أمها ومقارنةً بنجاح أخيها خالد، تنهار سنيحة في دوامة الغيرة لتصبح مجرد ظل في بيت عائلتها، تُعرف بـ "الآنسة لا أحد".
+                    </p>
+                    <hr class="text-white-50">
+                    
+                    <h3 class="text-white mb-3">الموسم 1</h3>
+                    <div class="episode-list">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // خريطة لربط رقم الحلقة بـ Video ID (VID) الذي استخدمته في الكود الأصلي
+        const EPISODE_LINKS = {
+            "8": "68a019a0a",
+            "7": "574fef84a",
+            "6": "8a765a035",
+            "5": "534d0b336",
+            "4": "1fb9e3a7e",
+            "3": "93d225b1b",
+            "2": "d0ae801e2",
+            "1": "db76b0b48"
+        };
+
+        const episodeListContainer = document.querySelector('.episode-list');
+
+        // توليد رابط المشغل بناءً على الـ VID
+        const generateLink = (episodeNumber) => {
+            const vid = EPISODE_LINKS[episodeNumber.toString()];
+            return `player.html?vid=${vid}&title=مسلسل الحسد الحلقة ${episodeNumber}`;
+        };
+
+        // توليد قائمة الحلقات
+        for (let i = 8; i >= 1; i--) {
+            const link = generateLink(i);
+            const episodeItem = document.createElement('div');
+            episodeItem.className = 'episode-item';
+            
+            const episodeLink = document.createElement('a');
+            episodeLink.href = link;
+            episodeLink.className = 'episode-link';
+            
+            episodeLink.innerHTML = `
+                <span class="badge rounded-pill me-2">حلقة ${i}</span>
+                الحلقة ${i} الثامنة مترجمة
+                <i class="fa fa-play float-start mt-1"></i>
+            `;
+            
+            episodeItem.appendChild(episodeLink);
+            episodeListContainer.appendChild(episodeItem);
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
