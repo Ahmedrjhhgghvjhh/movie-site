@@ -1,112 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>قائمة الأفلام</title>
-        <meta
-            name="google-site-verification"
-            content="stAhrbJcjL-uZv9Qkwx2Dt4c4z8O_TBGawsXGzNpwgI"
-        />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <header>
-            <a href="index.html" class="logo">MovieSite</a>
-            <nav>
-                <a href="series.html">المسلسلات</a>
-                <a href="movies.html">الأفلام</a>
-                <a href="contact.html">اتصل بنا</a>
-            </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الأفلام</title>
+    <meta name="google-site-verification" content="stAhrbJcjL-uZv9Qkwx2Dt4c4z8O_TBGawsXGzNpwgI" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">MovieSite</a>
+        <nav>
+            <a href="series.html">المسلسلات</a>
+            <a href="movies.html">الأفلام</a> 
+            <a href="contact.html">اتصل بنا</a>
+        </nav>
 
-            <div class="search-bar">
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="ابحث عن فيلم..."
-                    oninput="searchContent()"
-                />
-                <button>بحث</button>
-            </div>
-        </header>
-
-        <div class="container">
-            <h1>أفلام الأكشن والإثارة</h1>
-
-            <div class="listing-grid" id="contentGrid">
-                <a
-                    href="demon-slayer-details.html"
-                    class="movie-link"
-                    style="text-decoration: none; color: inherit"
-                >
-                    <div class="movie-card" id="DemonSlayerCard">
-                        <img
-                            src="images/demonslayer.jpg"
-                            alt="غلاف فيلم قاتل الشياطين"
-                        />
-                        <div class="movie-info">
-                            <h4>قاتل الشياطين (Demon Slayer)</h4>
-                            <p>النوع: أكشن، فانتازيا | سنة الإنتاج: 2024</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a
-                    href="rocky-details.html"
-                    class="movie-link"
-                    style="text-decoration: none; color: inherit"
-                >
-                    <div class="movie-card" id="RockyCard">
-                        <img
-                            src="images/roky.jpg"
-                            alt="غلاف فيلم روكي الغلابة"
-                        />
-                        <div class="movie-info">
-                            <h4>روكي الغلابة</h4>
-                            <p>النوع: رياضة، دراما | سنة الإنتاج: 1976</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a
-                    href="totalkiller-details.html"
-                    class="movie-link"
-                    style="text-decoration: none; color: inherit"
-                >
-                    <div class="movie-card" id="TotalKillerCard">
-                        <img
-                            src="images/totall-killer.jpg"
-                            alt="غلاف عمل القاتل الشامل"
-                        />
-                        <div class="movie-info">
-                            <h4>القاتل الشامل (Total Killer)</h4>
-                            <p>النوع: أكشن، إثارة | سنة الإنتاج: 2024</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="ابحث عن فيلم..." oninput="searchContent()">
+            <button>بحث</button>
         </div>
+    </header>
 
-        <footer>
-            <p>جميع الحقوق محفوظة &copy; 2025</p>
-        </footer>
+    <div class="container">
+        <h1>أفلام الأكشن والإثارة</h1>
+        
+        <div class="listing-grid" id="contentGrid">
+            
+            <a href="interstellar-details.html" class="movie-link" style="text-decoration: none; color: inherit;">
+                <div class="movie-card">
+                    <img src="images/interstellar.jpg" alt="غلاف فيلم Interstellar">
+                    <div class="movie-info">
+                        <h4>Interstellar (بين النجوم)</h4>
+                        <p>النوع: خيال علمي، دراما | التقييم: 8.7</p>
+                    </div>
+                </div>
+            </a>
 
-        <script>
-            function searchContent() {
-                let input = document.getElementById("searchInput");
-                let filter = input.value.toUpperCase();
-                let grid = document.getElementById("contentGrid");
-                let links = grid.querySelectorAll(".movie-link");
-                links.forEach((link) => {
-                    let card = link.querySelector(".movie-card");
-                    let title = card.querySelector("h4").textContent;
-                    if (title.toUpperCase().includes(filter)) {
-                        link.style.display = "";
-                    } else {
-                        link.style.display = "none";
-                    }
-                });
-            }
-        </script>
-    </body>
+            <a href="thewolfofwallstreet-details.html" class="movie-link" style="text-decoration: none; color: inherit;">
+                <div class="movie-card">
+                    <img src="images/wolf_wallstreet.jpg" alt="غلاف فيلم The Wolf of Wall Street">
+                    <div class="movie-info">
+                        <h4>The Wolf of Wall Street (ذئب وول ستريت)</h4>
+                        <p>النوع: سيرة ذاتية، كوميديا | التقييم: 8.2</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="thelostbus-details.html" class="movie-link" style="text-decoration: none; color: inherit;">
+                <div class="movie-card">
+                    <img src="images/lost_bus.jpg" alt="غلاف فيلم The Lost Bus">
+                    <div class="movie-info">
+                        <h4>The Lost Bus (الحافلة المفقودة)</h4>
+                        <p>النوع: سيرة ذاتية، دراما | التقييم: 8.3</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="thegentlemen-details.html" class="movie-link" style="text-decoration: none; color: inherit;">
+                <div class="movie-card">
+                    <img src="images/gentlemen.jpg" alt="غلاف فيلم The Gentlemen">
+                    <div class="movie-info">
+                        <h4>The Gentlemen (الرجال النبلاء)</h4>
+                        <p>النوع: أكشن، جريمة | التقييم: 7.8</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="kuboandthetwostrings-details.html" class="movie-link" style="text-decoration: none; color: inherit;">
+                <div class="movie-card">
+                    <img src="images/kubo_strings.jpg" alt="غلاف فيلم Kubo and the Two Strings">
+                    <div class="movie-info">
+                        <h4>Kubo and the Two Strings (كوبو والوترين)</h4>
+                        <p>النوع: أنيميشن، مغامرات | التقييم: 7.7</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="thedarktower-details.html" class="movie-link" style="text-decoration: none; color: inherit;">
+                <div class="movie-card">
+                    <img src="images/dark_tower.jpg" alt="غلاف فيلم The Dark Tower">
+                    <div class="movie-info">
+                        <h4>The Dark Tower (البرج المظلم)</h4>
+                        <p>النوع: أكشن، دراما | التقييم: 7.5</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="sing2-details.html" class="movie-link" style="text-decoration: none; color: inherit;">
+                <div class="movie-card">
+                    <img src="images/sing2.jpg" alt="غلاف فيلم Sing 2">
+                    <div class="movie-info">
+                        <h4>Sing 2 (غني 2)</h4>
+                        <p>النوع: أنيميشن، كوميديا | التقييم: 7.3</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="rocky.html" class="movie-link" style="text-decoration: none; color: inherit;">
+                <div class="movie-card" id="RockyCard">
+                    <img src="images/roky.jpg" alt="غلاف فيلم روكي الغلابة">
+                    <div class="movie-info">
+                        <h4>روكي الغلابة</h4>
+                        <p>النوع: رياضة، دراما | سنة الإنتاج: 1976</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="totalkiller.html" class="movie-link" style="text-decoration: none; color: inherit;">
+                <div class="movie-card" id="TotalKillerCard">
+                    <img src="images/totall-killer.jpg" alt="غلاف عمل القاتل الشامل">
+                    <div class="movie-info">
+                        <h4>القاتل الشامل (Total Killer)</h4>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="demonslayer.html" class="movie-link" style="text-decoration: none; color: inherit;">
+                <div class="movie-card" id="DemonSlayerCard">
+                    <img src="images/demonslayer.jpg" alt="غلاف فيلم قاتل الشياطين">
+                    <div class="movie-info">
+                        <h4>قاتل الشياطين (Demon Slayer)</h4>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025</p>
+    </footer>
+
+    <script>
+        function searchContent() {
+            let input = document.getElementById('searchInput');
+            let filter = input.value.toUpperCase();
+            let grid = document.getElementById('contentGrid');
+            let links = grid.querySelectorAll('.movie-link');
+            links.forEach(link => {
+                let card = link.querySelector('.movie-card');
+                let title = card.querySelector('h4').textContent;
+                if (title.toUpperCase().includes(filter)) {
+                    link.style.display = ""; 
+                } else {
+                    link.style.display = "none"; 
+                }
+            });
+        }
+    </script>
+</body>
 </html>
